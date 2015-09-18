@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Zoom In/Out</title>
+<title>Simone Milan - Photographer</title>
 <!-- must have -->
 <link href="bannerscollection_zoominout.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -44,7 +44,8 @@ color:#fff !important;
 <script type="text/javascript">
 $(window).load(function() {
 // Animate loader off screen
-$('.div-loading').fadeOut(1800).animate();
+$('.div-loading').fadeOut(1800);
+$('.simone-logo').delay(1500).fadeIn(1000);
 });
 </script>
 	<script>
@@ -74,6 +75,7 @@ $('.div-loading').fadeOut(1800).animate();
 </head>
 
 <body bgcolor="#cccccc">
+<img class="simone-logo" src="images/logo.png">
 
   <div class="div-loading">
      <div id="svg-container">
@@ -219,24 +221,24 @@ $('.div-loading').fadeOut(1800).animate();
 
            </div>
            <nav class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="/">Home</a>
-                </li>
-                <li><a href="/products">Products</a>
-                </li>
-                <li><a href="/about-us">About Us</a>
-                </li>
-                <li><a href="/contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+             <div class="container-fluid">
+                 <div class="navbar-header hidden-lg logo"><a class="navbar-brand" href="#">Simone Milan</a>
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                     </button>
+                 </div>
+                 <div class="collapse navbar-collapse navbar-menubuilder">
+                     <ul class="nav navbar-nav navbar-left">
+                         <li><a href="/">Home</a>
+                         </li>
+                         <li><a href="/products">Products</a>
+                         </li>
+                         <li><a href="/about-us">About Us</a>
+                         </li>
+                         <li><a href="/contact">Contact Us</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
 
            </nav>
 

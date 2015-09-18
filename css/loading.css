@@ -15,6 +15,18 @@
 		z-index:9999;
 		margin:0 !important;
 	}
+	.logo{
+		font-family: Hitchhiker;
+	}
+	.simone-logo{
+	position:absolute;
+	display:table;
+	z-index:999;
+	margin-left:-140px;
+	top:45%;
+	left:50%;
+	display:none;
+	}
 	/* * * * * * * * * * * * * * * * * * * SVG SIMONE MILAN * * * * * * * * * * * * * * * * * * * */
 		#svg-container {
 			position: relative;
