@@ -3,7 +3,7 @@
 			src: url(Hitchhiker.ttf);
 		}
 	body {
-		background-color: #212A3F;
+		background-color: #040303;
 	}
 	/* * * * * * * * * * * * * * * * * * * SVG SIMONE MILAN * * * * * * * * * * * * * * * * * * * */
 		#svg-container {
@@ -30,26 +30,26 @@
 		@keyframes draw {
 		to {
 			stroke-dashoffset: 0;
-			fill:#8893AE;
+			fill:#808080;
 			}
 		}
 		@-webkit-keyframes draw {
 		to {
 			stroke-dashoffset: 0;
-			fill:#8893AE;
+			fill:#808080;
 			}
 		}
 		
 		@-moz-keyframes draw {
 		to {
 			stroke-dashoffset: 0;
-			fill:#8893AE;
+			fill:#808080;
 			}
 		}
 		@-o-keyframes draw {
 		to {
 			stroke-dashoffset: 0;
-			fill:#8893AE;
+			fill:#808080;
 			}
 		}
 		/* * * * * * * * * * * * * * * * * * * CARICAMENTO * * * * * * * * * * * * * * * * * * * */
@@ -62,7 +62,7 @@
 		.sk-cube-grid .sk-cube {
 		  width: 33%;
 		  height: 33%;
-		  background-color: #8893AE;
+		  background-color: #808080;
 		  float: left;
 		  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
 				  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
@@ -118,6 +118,6 @@
 		  width: 80px;
 		  height: 40px;
 		  margin: 40px auto;
-		  color:#8893AE;
+		  color:#808080;
 		   font-family: Hitchhiker;
 		}
