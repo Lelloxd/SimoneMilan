@@ -24,7 +24,7 @@
   						Username: <input type="text" name="user" placeholder="username" required=""/><br><br>
   						Password: <input type="password" name="pwd" placeholder="********" required=""/><br><br>
   					<input type="submit" value="Login"/>
-            <!-- <span> <?php echo $error; ?> </span> -->
+            <span> <?php echo $error; ?> </span>
   					</form>
 
   			</div>
