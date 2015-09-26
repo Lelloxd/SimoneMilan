@@ -2,40 +2,38 @@
 //avvio la sessione
 session_start();
 // mi connetto al MySQL definendo host, user, pwd e nome del db
-$db_host = "localhost";
+$db_host = "127.0.0.1";
 $db_user = "root";
 $db_pass = "";
 $db_name = "simonemilan";
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 // Check connection
-if (mysqli_connect_errno())
-{
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-//parte della connessione da spostare in un file connect_db.php
+echo "Connected successfully";
 
-if (isset($_POST["username"]) && isset($_POST["password"])) {
+
+if (isset($_POST["user"]) && isset($_POST["pwd"])) {
 	// recupero i valori passati via POST
-	$username = $_POST["username"];
-	$password = $_POST["password"];
+	$username = $_POST["user"];
+	$password = $_POST["pwd"];
 	$username = mysqli_real_escape_string($conn, $username);
 	$password = mysqli_real_escape_string($conn, $password);
 
-	$password = md5($password);
+   $password = md5($password);
 }
-else echo "schifolafiga";
-
-/*if (get_magic_quotes_gpc()){
-		$username = stripslashes($username);
-		$password = stripslashes($password);
-}*/
+else {
+	echo "username e password non inseriti";
+}
 
 
 
 //query per verificare la correttezza del login
-$query = "SELECT * FROM admin_login WHERE username = $username AND password = $password";
+$query = "SELECT * FROM admin_login WHERE username = '$username' AND password = '$password'";
 $result = mysqli_query($conn, $query);
+
 //controllo che ci sia qualcosa dentro a $results
 if ($result)
 {
@@ -49,10 +47,11 @@ if ($result)
     // se i dati sono sbagliati resetto la variabile di sessione e rimando al form di login
     $_SESSION['userid'] = "";
     session_destroy();
-    header('location:form_login.php');
+		echo "errore";
+		//header('location:form_login.php');
   }
 }else{
-  // se non ci sono risultati stampo zero
+  // se non ci sono risultati reindirizzo al form di login
   echo "boiadio";
 }
 ?>
