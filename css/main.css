@@ -1,0 +1,18 @@
+.navbar-inverse {
+background-color: #000 !important;
+border: none !important;
+opacity:.8 !important;
+color:#fff !important;
+}
+.navbar-inverse>li>a:hover,
+.navbar-inverse>li>a:focus {
+    color: #fff !important;
+    background-color: rgba(248, 248, 248, 1) !important;
+}
+@media (min-width:1280px){
+.navbar-left{float:right !important;}
+.nav{margin-right: 40% !important; background-color:#000;}
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff !important;
+}
