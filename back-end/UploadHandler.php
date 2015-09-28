@@ -1319,7 +1319,6 @@ class UploadHandler
             )) : null;
         // Parse the Content-Range header, which has the following form:
         // Content-Range: bytes 0-524287/2000000
-        $fileee = 'logs.txt';
 
         $content_range_header = $this->get_server_var('HTTP_CONTENT_RANGE');
         $content_range = $content_range_header ?
@@ -1340,7 +1339,7 @@ class UploadHandler
                         $index,
                         $content_range
                     );
-                    file_put_contents($fileee, $file_name ? $file_name : $upload['name'][$index]);
+                    //AGGIUNGI QUI LA ROUTINE PER L'INSERIMENTO DELL IMMAGINE NEL DB --STEP7
                 }
             } else {
                 // param_name is a single object identifier like "file",
