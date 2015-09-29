@@ -16,7 +16,7 @@
           Scelta immagine:<input type="file" name="img" required><br><br>
           Nome immagine:<input type="text" name="nome"><br><br>
           Descrizione immagine:<input type="text" name="desc"><br><br>
-          Dimensioni immagine:<input type="number" type="dim1">X<input type="number" name="dim2"><br><br>
+          Dimensioni immagine:<input type="checkbox" name="dim1"><br><br>
           Peso immagine:<input type="range" name="peso" min="0" max="20" value="0"><br><br>
           <input type="submit" value="upload">
         </div>

@@ -6,25 +6,63 @@
 <!-- must have -->
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<link href="css/loading.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/main.css" rel="stylesheet"/>
+<link href="css/gallery.css" rel="stylesheet" />
 <?php
-//STRUTTURA GALLERY
-              // <div class="row">
-              // 	<div class="col-md-6 imagecontainer">
-              //   <div class=" view view-tenth" style="width:100%; height:auto;">
-              //   <img style="height:100%;width:100%;"src="http://normandrobert.com/uploads/project/w1000/SH-Remicade-1.jpg">
-              //                     <div class="mask">
-              //                         <h2>Hover Style #10</h2>
-              //                         <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-              //                         <a href="#" class="info">Read More</a>
-              //                     </div>
-              // 	</div>
-              // 	</div>
-// STRUTTURA FULL WIDTH IMAGE
-              // <div class="col-md-12 imagecontainer imagefull">
-              // <div class=" view view-tenth"	  style="width:100%;">
+require_once("back-end/connect_db.php");
+$query = "SELECT * FROM images";
+$query=mysqli_query($conn,$query);
+$riga=0;
+if ($query) {
+  while($imaggine = mysqli_fetch_array($query))
+  {
+  if(!$imaggine['full_width'])
+  {
+    if($riga==0)
+    echo '<div class="row">';
+  ?>
+
+      <div class="col-md-6 imagecontainer">
+         <div class=" view view-tenth" style="width:100%; height:auto;">
+         <img style="height:100%;width:100%;" src="data:image/jpeg;base64,<?php echo base64_encode($imaggine['image']);?>">
+             <div class="mask">
+                        <h2><?php echo $imaggine['nome'];?></h2>
+                  <p><?php echo $imaggine['descrizione'];?></p>
+                       <a href="#" class="info">Read More</a>
+                      </div>
+      </div>
+    </div>
+    <?php
+    $riga++;
+    if($riga==2)
+    {
+    echo "</div>";
+    $riga=0;
+    }
+  }else{
+    if($riga!=0)
+      echo "</div>";
+      ?>
+      <div class="row">
+      <div class="col-md-12 imagecontainer imagefull">
+         <div class=" view view-tenth" style="width:100%;">
+         <img style="height:100%;width:100%;" src="data:image/jpeg;base64,<?php echo base64_encode($imaggine['image']);?>">
+             <div class="mask">
+                        <h2><?php echo $imaggine['nome'];?></h2>
+                  <p><?php echo $imaggine['descrizione'];?></p>
+                       <a href="#" class="info">Read More</a>
+                      </div>
+      </div>
+    </div>
+  </div>
+
+        <?php
+  }
+
+
+}
+}
 ?>
            <nav class="navbar navbar-inverse navbar-fixed-bottom">
              <div class="container-fluid">
