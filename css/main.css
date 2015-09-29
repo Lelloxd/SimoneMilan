@@ -9,7 +9,7 @@ color:#fff !important;
     color: #fff !important;
     background-color: rgba(248, 248, 248, 1) !important;
 }
-@media (min-width:1279px){
+@media (min-width:1280px){
 .navbar-left{float:right !important;}
 .nav{margin-right: 40% !important; background-color:#000;}
 }
