@@ -19,22 +19,13 @@
 
   	<div>
   			<div align="center">
-  					<h1>LOGIN</h1> <br>
-<<<<<<< HEAD
-  					<form method="POST" action="login.php">
+  				<h1>LOGIN</h1> <br>
+  				<form method="POST" action="login.php">
   						Username: <input type="text" name="user" placeholder="username" required><br><br>
   						Password: <input type="password" name="pwd" placeholder="********" required><br><br>
-  					<input type="submit" value="Login">
+  					  <input type="submit" value="Login">
             <!-- <span> <?php echo $error; ?> </span> -->
-=======
-  					<form id="login_form" method="POST" action="login.php">
-  						Username: <input type="text" name="user" placeholder="username" required=""/><br><br>
-  						Password: <input type="password" name="pwd" placeholder="********" required=""/><br><br>
-  					<input type="submit" value="Login"/>
-            <span> <?php echo $error; ?> </span>
->>>>>>> origin/master
-  					</form>
-
+          </from>
   			</div>
   	</div>
   </body>
