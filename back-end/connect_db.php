@@ -2,7 +2,7 @@
 // mi connetto al MySQL definendo host, user, pwd e nome del db
 $db_host = "localhost";
 $db_user = "root";
-$db_pass = "root";
+$db_pass = "";
 $db_name = "simonemilan";
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 

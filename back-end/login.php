@@ -1,7 +1,7 @@
 <?php
 //avvio la sessione
 session_start();
-
+require("connect_db.php");
 if (isset($_POST["user"]) && isset($_POST["pwd"])) {
 	// recupero i valori passati via POST
 	$username = $_POST["user"];
@@ -16,20 +16,20 @@ else {
 }
 
 // recupero i valori passati via POST
-$username = trim($_POST["username"]);
-$password = trim($_POST["password"]);
+$username = trim($_POST["user"]);
+$password = trim($_POST["pwd"]);
 
 if (get_magic_quotes_gpc()){
 		$username = stripslashes($username);
 		$password = stripslashes($password);
 }
 
-$username = mysqli_real_escape_string($conn, $username;
+$username = mysqli_real_escape_string($conn, $username);
 $password = mysqli_real_escape_string($conn, $password);
 
 $password = md5($password);
 
-require("connect_db.php");
+
 
 //query per verificare la correttezza del login
 $query = "SELECT * FROM admin_login WHERE username = '$username' AND password = '$password'";
@@ -50,7 +50,7 @@ if ($result)
     $_SESSION['userid'] = "";
     session_destroy();
 		//echo "errore";
-    header('location: form_login.php'):
+    header('location: form_login.php');
   }
 }else{
   // se non ci sono risultati reindirizzo al form di login
