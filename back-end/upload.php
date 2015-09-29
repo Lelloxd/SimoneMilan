@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  //session_start();
   require("connect_db.php");
 if(isset($_POST["nome"]))
 {
@@ -32,7 +32,7 @@ if(isset($_POST["nome"]))
   }
 }
 
-  $query = "SELECT * FROM images";
+  $query = "SELECT * FROM images ORDER BY id DESC";
   $query=mysqli_query($conn,$query);
   if ($query) {
     while($imaggine = mysqli_fetch_array($query))

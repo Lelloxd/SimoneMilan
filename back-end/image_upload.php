@@ -11,16 +11,16 @@
   </head>
   <body>
     <div id="upload_form" style="width:600px; height:210px; margin: 50px auto; border:1px solid black;">
-      <form method="post" action="upload.php" enctype="multipart/form-data">
+      <form method="post" action="image_upload.php" enctype="multipart/form-data">
         <div id="labels" style="float: left;">
           Scelta immagine:<input type="file" name="img" required><br><br>
           Nome immagine:<input type="text" name="nome"><br><br>
           Descrizione immagine:<input type="text" name="desc"><br><br>
-          Dimensioni immagine:<input type="checkbox" name="dim1"><br><br>
-          Peso immagine:<input type="range" name="peso" min="0" max="20" value="0"><br><br>
+          Larghezza massima:<input type="checkbox" name="dim1"><br><br>
           <input type="submit" value="upload">
         </div>
       </form>
     </div>
+    <?php require_once("upload.php");?>
   </body>
 </html>
