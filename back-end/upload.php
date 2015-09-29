@@ -2,8 +2,8 @@
   session_start();
 
   $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));
-
-  /*//all the fields are not required except img
+  $type = file_get_contents($_FILES['type']['mime']);
+  //all the fields are not required except img
   if (isset($_POST["nome"]))
     $nome = $_POST["nome"];
   else $nome = "photo_" + date("his");  //if no name is insert, we set by default photo_hhmmss
@@ -15,15 +15,9 @@
   else $dim = "0x0";
   if (isset($_POST["peso"]))
     $peso = $_POST["peso"];   //the weight of an img is stored as INT where 1 unit represents 1 MB
-  else $peso = "0"*/
+  else $peso = "0";
 
   require("connect_db.php");
-
-  $nome = "prova2";
-  $desc = "prova inserimento immagine";
-  $dim = "123x123";
-  $type = "jpeg";
-  $peso = "20";
 
   $query = "INSERT INTO images(image, name, description, dimensions, type, weight) VALUES ('$img', '$nome', '$desc', '$dim', '$type', '$peso')";
   if (!mysqli_query($conn, $query)){
