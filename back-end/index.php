@@ -1,15 +1,33 @@
+<!-- Pagina di login -->
 <?php
-/*
- * jQuery File Upload Plugin PHP Example
- * https://github.com/blueimp/jQuery-File-Upload
- *
- * Copyright 2010, Sebastian Tschan
- * https://blueimp.net
- *
- * Licensed under the MIT license:
- * http://www.opensource.org/licenses/MIT
- */
+  session_start(); //indispensabile per usare variabili di sessione
+  if (isset($_SESSION['userid'])) {
+    $_SESSION['userid']="";
+    session_destroy();
+    header('location: index.php');
+  }
 
-error_reporting(E_ALL | E_STRICT);
-require('UploadHandler.php');
-$upload_handler = new UploadHandler();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Admin Login</title>
+
+    </script>
+  </head>
+
+  <body>
+
+  	<div>
+  			<div align="center">
+  				<h1>LOGIN</h1> <br>
+  				<form method="POST" action="login.php">
+  						Username: <input type="text" name="user" placeholder="username" required><br><br>
+  						Password: <input type="password" name="pwd" placeholder="********" required><br><br>
+  					  <input type="submit" value="Login">
+            <!-- <span> <?php echo $error; ?> </span> -->
+          </from>
+  			</div>
+  	</div>
+  </body>
+</html>

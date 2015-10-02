@@ -44,13 +44,13 @@ if ($result)
     // in caso di successo creo la sesione
     $_SESSION['userid'] = $row['username'];
     // e reindirizzo alla pagina di gestione
-    header("location: image_upload.php");
+    header("location: progetti.php");
   }else{
     // se i dati sono sbagliati resetto la variabile di sessione e rimando al form di login
     $_SESSION['userid'] = "";
     session_destroy();
 		//echo "errore";
-    header('location: form_login.php');
+    header('location: index.php');
   }
 }else{
   // se non ci sono risultati reindirizzo al form di login
