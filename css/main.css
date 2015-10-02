@@ -16,3 +16,5 @@ color:#fff !important;
 .navbar-inverse .navbar-nav>li>a {
     color: #fff !important;
 }
+.social{position:absolute; right:0;bottom:60px; z-index:999;}
+.social img{width:70px; padding-right:20px; }
