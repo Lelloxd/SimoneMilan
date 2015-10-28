@@ -6,17 +6,13 @@ if (isset($_POST["user"]) && isset($_POST["pwd"])) {
 	// recupero i valori passati via POST
 	$username = $_POST["user"];
 	$password = $_POST["pwd"];
-	$username = mysqli_real_escape_string($conn, $username);
-	$password = mysqli_real_escape_string($conn, $password);
 
    $password = md5($password);
 }
 else {
 	echo "username e password non inseriti";
 }
-
 // recupero i valori passati via POST
-$username = trim($_POST["user"]);
 $password = trim($_POST["pwd"]);
 
 if (get_magic_quotes_gpc()){
@@ -24,7 +20,6 @@ if (get_magic_quotes_gpc()){
 		$password = stripslashes($password);
 }
 
-$username = mysqli_real_escape_string($conn, $username);
 $password = mysqli_real_escape_string($conn, $password);
 
 $password = md5($password);
@@ -33,7 +28,7 @@ $password = md5($password);
 
 //query per verificare la correttezza del login
 $query = "SELECT * FROM admin_login WHERE username = '$username' AND password = '$password'";
-
+echo $query;
 $result = mysqli_query($conn, $query);
 
 //controllo che ci sia qualcosa dentro a $results
