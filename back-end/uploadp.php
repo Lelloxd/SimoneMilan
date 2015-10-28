@@ -80,7 +80,7 @@ if(isset($_POST["nome"]))
                  <br><span style='color:white;'>Larghezza Massima</span> <input type='checkbox' name="<?php echo "full_width".$imaggine["id"];?>" <?php if($imaggine["full_width"]!=0) echo "checked";?>>
                          <br><a href="#" class="info">Salva</a>
                          <br><a href="#" class="info">Cancella</a>
-                         <br><a href="#" class="info">Modifica foto del progetto</a>
+                         <br><a href="image_upload.php?progetto=<?php echo $imaggine["id"];?>" class="info">Modifica foto del progetto</a>
                         </div>
         </div>
       </div>
