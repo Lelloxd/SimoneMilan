@@ -53,7 +53,7 @@ if(isset($_POST["nome"]))
              <br><span style='color:white;'>Descrizione Progetto</span> <input type='text' value="<?php echo $imaggine["descrizione"];?>" name="<?php echo "descrizione".$imaggine["id"];?>">
              <br><span style='color:white;'>Larghezza Massima</span> <input type='checkbox' name="<?php echo "full_width".$imaggine["id"];?>" <?php if($imaggine["full_width"]!=0) echo "checked";?>>
                      <br><a href="javascript:salva('<?php echo $imaggine["id"];?>','<?php echo "descrizione".$imaggine["id"];?>','<?php echo "nome".$imaggine["id"];?>','<?php echo "full_width".$imaggine["id"];?>')" class="info">Salva</a>
-                     <br><a href="<?php echo "image_upload.php?elimina=1&id=".$imaggine["id"];?>" class="info">Cancella</a>
+                     <br><a href="<?php echo "progetti.php?elimina=1&id=".$imaggine["id"];?>" class="info">Cancella</a>
                      <br><a href="image_upload.php?progetto=<?php echo $imaggine["id"];?>" class="info">Modifica foto del progetto</a>
                     </div>
         </div>
@@ -79,7 +79,7 @@ if(isset($_POST["nome"]))
                  <br><span style='color:white;'>Descrizione Progetto</span> <input type='text' value="<?php echo $imaggine["descrizione"];?>" id="<?php echo "descrizione".$imaggine["id"];?>">
                  <br><span style='color:white;'>Larghezza Massima</span> <input type='checkbox' id="<?php echo "full_width".$imaggine["id"];?>" <?php if($imaggine["full_width"]!=0) echo "checked";?>>
                          <br><a href="javascript:salva('<?php echo $imaggine["id"];?>','<?php echo "descrizione".$imaggine["id"];?>','<?php echo "nome".$imaggine["id"];?>','<?php echo "full_width".$imaggine["id"];?>')" class="info">Salva</a>
-                         <br><a href="<?php echo "image_upload.php?elimina=1&id=".$imaggine["id"];?>" class="info">Cancella</a>
+                         <br><a href="<?php echo "progetti.php?elimina=1&id=".$imaggine["id"];?>" class="info">Cancella</a>
                          <br><a href="image_upload.php?progetto=<?php echo $imaggine["id"];?>" class="info">Modifica foto del progetto</a>
                         </div>
         </div>

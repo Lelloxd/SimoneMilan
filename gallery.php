@@ -65,27 +65,35 @@ if ($query) {
 }
 }
 ?>
-           <nav class="navbar navbar-inverse navbar-fixed-bottom">
-             <div class="container-fluid">
-                 <div class="navbar-header hidden-lg logo"><a class="navbar-brand" href="#">Simone Milan</a>
-                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                     </button>
-                 </div>
-                 <div class="collapse navbar-collapse navbar-menubuilder">
-                     <ul class="nav navbar-nav navbar-left">
-                         <li><a href="/">Home</a>
-                         </li>
-                         <li><a href="/products">Products</a>
-                         </li>
-                         <li><a href="/about-us">About Us</a>
-                         </li>
-                         <li><a href="/contact">Contact Us</a>
-                         </li>
-                     </ul>
-                 </div>
-             </div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+      <div class="navbar-header hidden-lg logo"><a class="navbar-brand" href="#">Simone Milan</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul class="nav navbar-nav navbar-left">
+              <li><a href="index.html">Home</a>
+              </li>
+              <li><a href="#">Progetti</a>
+              </li>
+              <li><a href="chisono.html">Chi sono</a>
+              </li>
+              <li><a href="contatti.php">Contattami</a>
+              </li>
+          </ul>
+      </div>
+  </div>
 
-           </nav>
-
+</nav>
+           <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+           <script>
+           $("body").on("contextmenu", "", function(e) {
+           return false;
+           });
+           $("body").on("dragstart", "", function(e) {
+           return false;
+           });
+           </script>
 </body>
 </html>
