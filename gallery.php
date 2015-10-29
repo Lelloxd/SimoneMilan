@@ -9,9 +9,10 @@
 <link href="css/bootstrap.min.css" rel="stylesheet"/>
 <link href="css/main.css" rel="stylesheet"/>
 <link href="css/gallery.css" rel="stylesheet" />
+<img src="images/logo.png" class="logo-centered">
 <?php
 require_once("back-end/connect_db.php");
-$query = "SELECT * FROM images";
+$query = "SELECT * FROM progetti";
 $query=mysqli_query($conn,$query);
 $riga=0;
 if ($query) {
@@ -29,7 +30,7 @@ if ($query) {
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>
-                       <a href="#" class="info">Read More</a>
+                       <a href="progetto.php?id=<?php echo $imaggine['id'];?>&nome=<?php echo $imaggine['nome'];?>" class="info">Apri Progetto</a>
                       </div>
       </div>
     </div>
@@ -51,7 +52,7 @@ if ($query) {
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>
-                       <a href="#" class="info">Read More</a>
+                       <a href="progetto.php?id=<?php echo $imaggine['id'];?>&nome=<?php echo $imaggine['nome'];?>" class="info">Apri Progetto</a>
                       </div>
       </div>
     </div>

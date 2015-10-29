@@ -15,6 +15,10 @@
    cursor: default;
    background: #fff url(../images/bgimg.jpg) no-repeat center center;
 }
+.logo-centered{
+  display:table;
+  margin: 20px auto;
+}
 .view .mask,.view .content {
    width: auto;
    height: auto;

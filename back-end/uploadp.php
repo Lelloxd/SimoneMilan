@@ -31,7 +31,7 @@ if(isset($_POST["nome"]))
     echo "Error: Something went wrong :(";
   }
 }
-
+  require("servizip.php");
   $query = "SELECT * FROM progetti ORDER BY id";
   $query=mysqli_query($conn,$query);
   $riga=0;
@@ -52,8 +52,8 @@ if(isset($_POST["nome"]))
              <br><span style='color:white;'>Nome Progetto</span> <input type='text' value="<?php echo $imaggine["nome"];?>" name="<?php echo "nome".$imaggine["id"];?>">
              <br><span style='color:white;'>Descrizione Progetto</span> <input type='text' value="<?php echo $imaggine["descrizione"];?>" name="<?php echo "descrizione".$imaggine["id"];?>">
              <br><span style='color:white;'>Larghezza Massima</span> <input type='checkbox' name="<?php echo "full_width".$imaggine["id"];?>" <?php if($imaggine["full_width"]!=0) echo "checked";?>>
-                     <br><a href="#" class="info">Salva</a>
-                     <br><a href="#" class="info">Cancella</a>
+                     <br><a href="javascript:salva('<?php echo $imaggine["id"];?>','<?php echo "descrizione".$imaggine["id"];?>','<?php echo "nome".$imaggine["id"];?>','<?php echo "full_width".$imaggine["id"];?>')" class="info">Salva</a>
+                     <br><a href="<?php echo "image_upload.php?elimina=1&id=".$imaggine["id"];?>" class="info">Cancella</a>
                      <br><a href="image_upload.php?progetto=<?php echo $imaggine["id"];?>" class="info">Modifica foto del progetto</a>
                     </div>
         </div>
@@ -75,11 +75,11 @@ if(isset($_POST["nome"]))
            <img style="height:100%;width:100%;" src="data:image/jpeg;base64,<?php echo base64_encode($imaggine['image']);?>">
                <div class="mask">
 
-                 <br><span style='color:white;'>Nome Progetto</span> <input type='text' value="<?php echo $imaggine["nome"];?>" name="<?php echo "nome".$imaggine["id"];?>">
-                 <br><span style='color:white;'>Descrizione Progetto</span> <input type='text' value="<?php echo $imaggine["descrizione"];?>" name="<?php echo "descrizione".$imaggine["id"];?>">
-                 <br><span style='color:white;'>Larghezza Massima</span> <input type='checkbox' name="<?php echo "full_width".$imaggine["id"];?>" <?php if($imaggine["full_width"]!=0) echo "checked";?>>
-                         <br><a href="#" class="info">Salva</a>
-                         <br><a href="#" class="info">Cancella</a>
+                 <br><span style='color:white;'>Nome Progetto</span> <input type='text' value="<?php echo $imaggine["nome"];?>" id="<?php echo "nome".$imaggine["id"];?>">
+                 <br><span style='color:white;'>Descrizione Progetto</span> <input type='text' value="<?php echo $imaggine["descrizione"];?>" id="<?php echo "descrizione".$imaggine["id"];?>">
+                 <br><span style='color:white;'>Larghezza Massima</span> <input type='checkbox' id="<?php echo "full_width".$imaggine["id"];?>" <?php if($imaggine["full_width"]!=0) echo "checked";?>>
+                         <br><a href="javascript:salva('<?php echo $imaggine["id"];?>','<?php echo "descrizione".$imaggine["id"];?>','<?php echo "nome".$imaggine["id"];?>','<?php echo "full_width".$imaggine["id"];?>')" class="info">Salva</a>
+                         <br><a href="<?php echo "image_upload.php?elimina=1&id=".$imaggine["id"];?>" class="info">Cancella</a>
                          <br><a href="image_upload.php?progetto=<?php echo $imaggine["id"];?>" class="info">Modifica foto del progetto</a>
                         </div>
         </div>
@@ -92,4 +92,23 @@ if(isset($_POST["nome"]))
 
   }
   }
+  echo'
+  <script>
+  function salva(id,desc,nom,f)
+  {
+    console.log(desc);
+    console.log(id);
+    console.log(nom);
+    console.log(f);
+    var descrizione=document.getElementById(desc).value;
+    var nome=document.getElementById(nom).value;
+    var fw=document.getElementById(f).checked;
+    console.log(fw);
+    console.log(descrizione);
+    if(fw)
+    location.href=("progetti.php?"+"modifica=1&fw=1"+"&id="+id+"&desc="+encodeURIComponent(descrizione)+"&nom="+encodeURIComponent(nome));
+    else
+    location.href=("progetti.php?"+"modifica=1&fw=0"+"&id="+id+"&desc="+encodeURIComponent(descrizione)+"&nom="+encodeURIComponent(nome));
+  }
+  </script>';
   ?>
