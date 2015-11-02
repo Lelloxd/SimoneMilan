@@ -49,7 +49,7 @@
 </form>
  <div class='social'><img src='img/instagram.png'><img src='img/facebook.png'><img src='img/twitter.png'></div>
   <div class='divcontatti'>
-    <div><img src='img/email-icon.png'><b><a href='mailto:simonemilan@simonemilanfoto.it'>SimoneMilan@SimoneMilanFoto.it</a></b></div>
+    <div><img src='img/email-icon.png'><b><a href='mailto:simonemilan@simonemilanfoto.it'>Simone@SimoneMilanFoto.it</a></b></div>
     <div><img src='img/iPhone-icon.png'><b>347 597 4981</b></div>
     <div><a href='http://lelloxd.altervista.org'><img src='img/web-icon.png'></a><b>Designed By <a href='http://lelloxd.altervista.org'>Antonello Fraioli</a></b></div>
   </div>
