@@ -1,16 +1,14 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <link href="../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../css/main.css" rel="stylesheet"/>
 <link href="../css/gallery.css" rel="stylesheet" />
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <?php
-      session_start();
-      if (!isset($_SESSION["userid"])) {
-        session_destroy();
-        header("location: index.php");
-      }
-    ?>
   </head>
   <body>
     <div id="upload_form" style="width:600px; height:210px; margin: 50px auto; border:1px solid black;">
@@ -24,6 +22,8 @@
         </div>
       </form>
     </div>
-    <?php require_once("uploadp.php");?>
+    <?php
+    session_start();
+    require_once("uploadp.php");?>
   </body>
 </html>

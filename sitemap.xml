@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.simonemilanfoto.it/</loc>
+  <lastmod>2015-11-05T15:49:34+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/gallery.php</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/contatti.php</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/progetto.php?id=2&amp;nome=Punti%20di%20Vista</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/progetto.php?id=4&amp;nome=Ritratto</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/progetto.php?id=5&amp;nome=Eleganza%20Particolare</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/progetto.php?id=6&amp;nome=New%20&amp;%20Old%20Architecture</loc>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://www.simonemilanfoto.it/index.html</loc>
+  <lastmod>2015-11-05T15:49:34+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+</urlset>

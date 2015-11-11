@@ -1,4 +1,3 @@
-
 <?php
   //session_start();
   require("connect_db.php");
@@ -45,12 +44,6 @@ if(isset($_POST["nome"]))
   // Check file size
   if ($_FILES["img"]["size"] > 5000000) {
       echo "Sorry, your file is too large.";
-      $uploadOk = 0;
-  }
-  // Allow certain file formats
-  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-  && $imageFileType != "gif" ) {
-      echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
       $uploadOk = 0;
   }
   // Check if $uploadOk is set to 0 by an error

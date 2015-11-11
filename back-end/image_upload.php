@@ -15,6 +15,7 @@
   <head>
   </head>
   <body>
+<a href="progetti.php">TORNA A GESTIONE PROGETTI</a>
     <div id="upload_form" style="width:600px; height:210px; margin: 50px auto; border:1px solid black;">
       <form method="post" action="image_upload.php?progetto=<?php echo $progid;?>" enctype="multipart/form-data">
         <div id="labels" style="float: left;">

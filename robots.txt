@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /images/
+Disallow: /img/
+Disallow: /skins/
+Disallow: /back-end/
+
+Sitemap: http://www.simonemilanfoto.it/sitemap.xml

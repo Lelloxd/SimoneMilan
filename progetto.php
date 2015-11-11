@@ -10,6 +10,7 @@
 <link href="css/main.css" rel="stylesheet"/>
 <link href="css/gallery.css" rel="stylesheet" />
 <link href="css/loading.css" rel="stylesheet" />
+<link href="css/lightbox.css" rel="stylesheet">
 <div class="div-loading">
    <div id="svg-container">
      <svg id="svg-canvas">
@@ -151,7 +152,7 @@ if ($query) {
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>
-                       <a href="javascript:fullscreen(<?php echo $imaggine['id'];?>)" class="info">Schermo intero</a>
+                       <a href="javascript:fullscreen(<?php echo $imaggine['id'];?>)" data-lightbox="roadtrip" class="info">Schermo intero</a>
                       </div>
       </div>
     </div>
@@ -173,7 +174,7 @@ if ($query) {
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>
-                       <a href="javascript:fullscreen(<?php echo $imaggine['id'];?>)" class="info">Schermo intero</a>
+                       <a href="javascript:fullscreen(<?php echo $imaggine['id'];?>)"  class="info">Schermo intero</a>
                       </div>
       </div>
     </div>
@@ -215,6 +216,7 @@ if ($query) {
            $('.div-loading').fadeOut(1800);
            });
            </script>
+		   <script src="js/lightbox.js"></script>
 <script>
 function fullscreen(id)
 {
