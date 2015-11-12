@@ -3,6 +3,9 @@
   margin: 20px auto;
   text-align: center;
 }
+body{
+  padding-bottom:40px;
+}
 #sendloading{display:none}
 .form-style-1 {
     margin:10px auto;

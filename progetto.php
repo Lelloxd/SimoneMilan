@@ -10,7 +10,7 @@
 <link href="css/main.css" rel="stylesheet"/>
 <link href="css/gallery.css" rel="stylesheet" />
 <link href="css/loading.css" rel="stylesheet" />
-<link href="css/lightbox.css" rel="stylesheet">
+<link href="js/lightbox/source/jquery.fancybox.css" rel="stylesheet" />
 <div class="div-loading">
    <div id="svg-container">
      <svg id="svg-canvas">
@@ -147,12 +147,12 @@ if ($query) {
   ?>
 
       <div class="col-md-6 imagecontainer">
-         <div class=" view view-tenth" style="width:100%; height:auto;">
+         <div class=" view view-tenth" style="width:100%; height:auto;" >
          <img style="height:100%;width:100%;" id="<?php echo $imaggine['id'];?>" src="back-end/<?php echo $imaggine['image'];?>">
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>
-                       <a href="javascript:fullscreen(<?php echo $imaggine['id'];?>)" data-lightbox="roadtrip" class="info">Schermo intero</a>
+                       <a href="back-end/<?php echo $imaggine['image'];?>" class="info">Schermo intero</a>
                       </div>
       </div>
     </div>
@@ -169,7 +169,7 @@ if ($query) {
       ?>
       <div class="row">
       <div class="col-md-12 imagecontainer imagefull">
-         <div class=" view view-tenth" style="width:100%;">
+         <div class=" view view-tenth" style="width:100%;" >
          <img style="height:100%;width:100%;" id="<?php echo $imaggine['id'];?>" src="back-end/<?php echo $imaggine['image'];?>">
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
@@ -216,7 +216,7 @@ if ($query) {
            $('.div-loading').fadeOut(1800);
            });
            </script>
-		   <script src="js/lightbox.js"></script>
+		   <script src="js/lightbox/source/jquery.fancybox.js"></script>
 <script>
 function fullscreen(id)
 {
@@ -257,6 +257,13 @@ return false;
 });
 $("body").on("dragstart", "", function(e) {
 return false;
+});
+$(document).ready(function() {
+
+	/* This is basic - uses default settings */
+  $("a.info").fancybox();
+
+
 });
 </script>
 </body>

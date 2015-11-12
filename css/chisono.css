@@ -1,0 +1,13 @@
+.chisono-centered{
+  display:table;
+  margin: 0px auto;
+  text-align: center;
+  max-width: 250px;
+}
+.divcontatti{position:absolute; left:0;bottom:60px; z-index:999;}
+.divcontatti img{width:70px; padding-right:20px; margin-left:20px; padding-top:10px; }
+a{color:black;}
+a:hover{text-decoration:none; color:black;}
+@media (max-width:555px){
+  .divcontatti{position:absolute; left:0;bottom:120px; z-index:999;}
+}
