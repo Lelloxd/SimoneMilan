@@ -60,12 +60,14 @@
     </div>
   </form>
   <div class='social'>
-    <a href="https://www.instagram.com/simonemilan_ph/">
-      <img src='img/instagram.png'>
-    </a>
-    <a href="https://www.facebook.com/simone.milan.90"><img src='img/facebook.png'></a>
-    <img src='img/twitter.png'>
-  </div>
+		<a href="https://www.instagram.com/simonemilan_ph/" target="_blank">
+			<img src='img/instagram.png' alt="instagram">
+		</a>
+		<a href="https://www.facebook.com/simone.milan.90" target="_blank">
+			<img src='img/facebook.png' alt="facebook">
+		</a>
+		<!-- <img src='img/twitter.png'> -->
+	</div>
   <div class='divcontatti hidden-xs'>
     <div>
       <img src='img/email-icon.png'><b><a href='mailto:simone@simonemilanfoto.it'>Simone@SimoneMilanFoto.it</a></b></div>
