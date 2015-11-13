@@ -149,7 +149,7 @@ if ($query) {
 
       <div class="col-md-6 imagecontainer">
          <div class=" view view-tenth" style="width:100%; height:auto;">
-         <img style="height:100%;width:100%;" src="back-end/thumb/<?php echo $imaggine['image'];?>">
+         <img style="height:100%;width:100%;" src="back-end/<?php echo $imaggine['image'];?>">
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>

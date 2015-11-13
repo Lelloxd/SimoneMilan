@@ -25,7 +25,7 @@ function create_thumb($src,$dest,$desired_width)
   if($exten==".png" || $exten==".PNG")
   {
   imagepng($virtual_image,$dest);
-  echo "CREATO";
+  echo "Thumbnail CREATO !";
   }else
   imagejpeg($virtual_image,$dest);
   }
@@ -37,7 +37,6 @@ if ($query) {
   {
     $ext=substr($imaggine["image"],-4);
     if($ext=="jpeg" || $ext=="JPEG")
-    $ext=".".$ext;
     echo $ext;
     if(!$imaggine["full_width"])
     create_thumb($imaggine["image"],"thumb/".$imaggine["image"],960);
