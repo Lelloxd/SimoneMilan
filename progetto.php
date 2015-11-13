@@ -148,7 +148,7 @@ if ($query) {
 
       <div class="col-md-6 imagecontainer">
          <div class=" view view-tenth" style="width:100%; height:auto;" >
-         <img style="height:100%;width:100%;" id="<?php echo $imaggine['id'];?>" src="back-end/<?php echo $imaggine['image'];?>">
+         <img style="height:100%;width:100%;" id="<?php echo $imaggine['id'];?>" src="back-end/thumb/<?php echo $imaggine['image'];?>">
              <div class="mask">
                         <h2><?php echo $imaggine['nome'];?></h2>
                   <p><?php echo $imaggine['descrizione'];?></p>
@@ -189,7 +189,7 @@ if ($query) {
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">
-      <div class="navbar-header hidden-lg logo"><a class="navbar-brand" href="#">Simone Milan</a>
+      <div class="navbar-header logo"><a class="navbar-brand" href="#">Simone Milan</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           </button>
       </div>

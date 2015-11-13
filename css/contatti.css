@@ -1,7 +1,14 @@
+@font-face {
+			font-family: Hitchhiker;
+			src: url(Hitchhiker.ttf);
+		}
 .logo-centered{
   display:table;
   margin: 20px auto;
   text-align: center;
+}
+.logo{
+  font-family: Hitchhiker;
 }
 body{
   padding-bottom:40px;

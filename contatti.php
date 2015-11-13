@@ -81,7 +81,7 @@
 
   <nav class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container-fluid">
-      <div class="navbar-header hidden-lg logo"><a class="navbar-brand" href="#">Simone Milan</a>
+      <div class="navbar-header logo"><a class="navbar-brand" href="#">Simone Milan</a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>

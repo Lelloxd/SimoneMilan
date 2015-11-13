@@ -81,8 +81,12 @@ if(isset($_POST["nome"]))
 
   //   $img = addslashes(file_get_contents($_FILES['img']['tmp_name']));
   $query = "INSERT INTO images(image, nome, descrizione, full_width, type, id_progetto) VALUES ('uploads/$newfilename', '$nome', '$desc', '$dim', '$type', '$idprogetto')";
+
   if (!mysqli_query($conn, $query)){
     echo "Error: Something went wrong :(";
+  }
+  else {
+    require("thumb.php");
   }
 }
   require("servizi.php");
